@@ -4,10 +4,16 @@
  * @author R. Jordan Crouser + CSC120 (Fall '22))
  * @version 13 October 2022
  */
+
+
+
+
 public class Pumpkin {
-    
-    /*
+
+     /**
      * Prints ASCII art depicting a jack-o'-lantern to the console
+     * @param none
+     * @return void: does not return a value
      */
     public void display() {
 
@@ -22,8 +28,9 @@ public class Pumpkin {
         System.out.println("     ''*-.,_______,.-*'  ");  
 
     }
+ 
     
-    /* main method (for testing) */
+//     /* main method (for testing) */
     public static void main(String[] args) {
         Pumpkin myPumpkin = new Pumpkin();
         myPumpkin.display();

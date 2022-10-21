@@ -5,47 +5,67 @@
  * @version 13 October 2022
  */
 
+
+
 class Scarecrow {
 
-    /* Parts of the Scarecrow
-     * TODO: Uncomment remaining parts as you implement each class
-     */
+    /* Parts of the Scarecrow*/
+
     private Pumpkin head;
-    // private Shirt body;
-    // private Pants legs;
+    private Shirt body;
+    private Pants legs;
     // private Hat hat;
-    // private Boot leftFoot;
-    // private Boot rightFoot;
-    // private Banner sign;
+    private Boot leftFoot;
+    private Boot rightFoot;
+    private Banner sign;
     private String message;
 
-    /* Constructor
-     * TODO: initialize remaining parts
+    /* Constructor */
+
+    /**
+     * Costructor for the Banner object
+     * @param classes to make the parts of the Scarecrow
+     * @return nothing
      */
-    public Scarecrow(Pumpkin h) {
+    public Scarecrow(Pumpkin h, Shirt b, Pants p, Boot b1, Boot b2, Banner s) {
         head = h;
+        body = b;
+        legs = p;
+        leftFoot = b1;
+        rightFoot = b2;
+        sign = s;
     }
 
-    /* Displays the Scarecrow 
-     * TODO: call the .display() method of each part... 
-     *       ...in the right order!
-    */
+
+    /**
+     * Displays the Scarecrow: 
+     * Calls the displays method of each part of the Scarecrow in the right order to draw the complete picture
+     * @param none
+     * @return void: does not return a value
+     */
     public void display() {
+        sign.display();
         head.display();
+        body.display();
+        legs.display();
+        leftFoot.display();
+        rightFoot.display();
+        
     }
 
     /* Main method (for testing) */
     public static void main(String[] args) {
 
-        // TODO: Don't forget to update the line below if you modify the constructor
-        Scarecrow myScarecrow = new Scarecrow(new Pumpkin());
+        String message = "Hello";
 
-        // If a message was passed in on the command line, extract and store it
-        // TODO: in Step 4, you'll pass this value along to your Banner constructor
+        //If a message was passed in on the command line, extract and store it 
         if (args.length > 0) {
-            myScarecrow.message = args[0];
+            message = args[0];
         }
 
+        // Modify the constructor
+        Scarecrow myScarecrow = new Scarecrow(new Pumpkin(), new Shirt(), new Pants(), new Boot("left"), new Boot("right"), new Banner(message)); 
+        
         myScarecrow.display();
     }
 

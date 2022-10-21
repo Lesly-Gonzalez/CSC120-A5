@@ -93,8 +93,8 @@ Now that each part is working individually, assemble them together inside the `S
 Once your Scarecrow is looking good, now it's time to add a decorative `Banner` that we can customize with a message. Unline the other classes representing parts of the `Scarecrow`, the `Banner` class **will** have a constructor which will take a `String` as a parameter that contains the message we want to print on the banner. You can stylize the banner however you like, but it should **resize** to fit the message. For example:
 
 ```
-   ****************************
- *** ~~~~~~~~~~~~~~~~~~~~~~~~ ***
+   **************************** //"***" + "*" * message.lenght + "***" 
+ *** ~~~~~~~~~~~~~~~~~~~~~~~~ *** ?? "***" + "~" * message.lenght + "~~~" + "***"
 *** ~  HAPPY FALL, EVERYONE! ~ ***
  *** ~~~~~~~~~~~~~~~~~~~~~~~~ ***
    ********************     ***
